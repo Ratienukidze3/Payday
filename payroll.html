@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payroll</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="fonts.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="payroll.css">
+</head>
+
+<body>
+    <!-- HEADER START -->
+    <header class="header_wrapper">
+        <a href="#" class="header_logo">
+            <img src="payday.svg" alt="" class="header_wrapper_logo"></a>
+        <div class="header_wrapper_rightside">
+            <button class="search_button"><i data-feather="search" class="fe feather_search"></i></button>
+            <input type="Search" placeholder="Search..." class="search_box" id="q" name="q">
+            <button class="bell_button"><i data-feather="bell" class="fe feather_bell"></i></button>
+            <div class="profile_wrapper_container">
+                <div class="profile_wrapper">
+                    <img src="nodari.png" alt="" class="profile_wrapper_img">
+                    <div class="profile_wrapper_description">
+                        <a href="#" class="profile_wrapper_name">Julia Hartmann</a>
+                        <span class="profile_wrapper_position">Admin · Baumbach and Sons</span>
+                    </div>
+                    <button class="dots3_button" id="dots3_button">
+                        <div id="arrow">
+                            <i data-feather="chevron-down" class="chevron-down" id="#"> </i>
+                        </div>
+                    </button>
+                </div>
+                <div class="dots3_drop" id="dots3_drop">
+                    <a href="#">
+                        <i data-feather="user"></i>
+                        User Profile
+                    </a>
+                    <a href="#">
+                        <i data-feather="settings"></i>
+                        Settings
+                    </a>
+                    <a href="#">
+                        <i data-feather="log-out"></i>
+                        Log out
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- HEADER END -->
+
+    <!-- SIDEBAR START -->
+    <div class="mainpage_container">
+        <div class="wrapper">
+            <ul class="nav_bar">
+
+                <li class="nav_bar_nav"> <a href="#" class="nav_bar_label"><i data-feather="home" class="fa homeicon"
+                            id="icon"></i><span class="nav_bar_name"> Home</span></a></li>
+                <li class="nav_bar_nav"> <a href="#" class="nav_bar_label"><i data-feather="briefcase"
+                            class="fa briefcaseicon" id="icon"></i><span class="nav_bar_name"> Banking</span></a></li>
+                <li class="nav_bar_nav"> <a href="#" class="nav_bar_label"><i data-feather="users" class="fa usersicon"
+                            id="icon"></i><span class="nav_bar_name"> People</span></a></li>
+
+                <li class="nav_bar_nav"><a href="#" class="nav_bar_label submenu1"><i data-feather="file-text"
+                            class="fa file-text" id="icon"></i><span class="nav_bar_name nav_bar_payroll">Payroll</span>
+                        <button class="btn" id="btn">
+                            <div id="arrow">
+                                <i data-feather="chevron-down" class="chevron-down chevron_down"></i>
+                            </div>
+                        </button></i></a>
+                    <ul class="submenu1_show submenu">
+                        <li><a href="#" class="category_subname_label"><span class="category_submenu_name">Run
+                                    Payroll</span></a></li>
+                        <li><a href="#" class="category_subname_label"></i><span
+                                    class="category_submenu_name">Settings</span></a></li>
+                    </ul>
+                </li>
+                <li class="nav_bar_nav"> <a href="#" class="nav_bar_label"><i data-feather="clock" class="fa homeicon"
+                            id="icon"></i><span class="nav_bar_name"> Time</span></a></li>
+                <li class="nav_bar_nav"> <a href="#" class="nav_bar_label"><i data-feather="settings"
+                            class="fa settingsicon" id="icon"></i><span class="nav_bar_name"> Settings</span></a></li>
+
+        </div>
+        <!-- SIDEBAR END -->
+
+
+        <!-- HOURS AND EARNINGS START -->
+        <section class="hoursearnings">
+            <div class="hours_container">
+                <h2 class="hours_title">Hours & Earnings</h2>
+                <div id="container" class="line_container">
+                    <div id="div1" class="line_div1"></div>
+                    <div id="div2" class="line_div2"></div>
+                    <div id="div3" class="line_div3"></div>
+                </div>
+                <div class="hours_title_box">
+                    <div class="widthonclick" onclick="setDivWidth(1)"><span>1</span>
+                        <p>Hours and Earnings</p>
+                    </div>
+                    ·
+                    <div class="widthonclick" onclick="setDivWidth(2)"><span>2</span>
+                        <p>Review</p>
+                    </div>
+                    ·
+                    <div class="widthonclick" onclick="setDivWidth(3)"><span>3</span>
+                        <p>Confirmation</p>
+                    </div>
+
+                </div>
+                <div class="settings_container">
+                    <div class="settings_wrapper">
+                        <i data-feather="rotate-ccw" class="df df-rotate"></i>
+                        <ul>
+                            <li>Pay Period</li>
+                            <li>Feb 1-28</li>
+                        </ul>
+                    </div>
+                    <div class="settings_wrapper">
+                        <i data-feather="calendar" class="df df-calendar"></i>
+                        <ul>
+                            <li>Due date</li>
+                            <li>March 3</li>
+                        </ul>
+                    </div>
+                    <div class="settings_wrapper">
+                        <i data-feather="dollar-sign" class="df df-history"></i>
+                        <ul>
+                            <li>Pay day</li>
+                            <li>March 5</li>
+                        </ul>
+                    </div>
+                    <div class="settings_wrapper">
+                        <i data-feather="dollar-sign" class="df df-history"></i>
+                        <ul>
+                            <li>TOTAL</li>
+                            <li>$85,246</li>
+                        </ul>
+                    </div>
+                    <div class="run_settings_wrapper">
+                        <button class="runsettingsbtn"><a href="#" class="runsettings"> <i data-feather="settings"
+                                    class="df df-settings"></i><span class="runsettingstitle">Pay run settings</span>
+                            </a></button>
+                    </div>
+                </div>
+                <!-- HOURS AND EARNINGS END -->
+
+
+                <!-- Manage Section Start -->
+                <section class="manage_employer">
+                    <div class="filter_container">
+                        <h2 class="filter_title">Section title</h2>
+                        <div class="filter_wrapper">
+                            <div class="searchbox_container">
+                                <i data-feather="search"></i>
+                                <input type="search" placeholder="Search" class="filter_searchbox">
+                            </div>
+                            <div class="filter_boxx">
+                                <button class="filter_box"> <a href="#">
+                                        <i data-feather="filter"></i>
+                                        <span>Filter</span></a>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+
+                <div class="employee-table">
+                    <div class="employee-row header-row">
+                        <div class="employee-cell">
+                            <input type="checkbox" onclick="checkAll(this)" class="input_padding">
+                        </div>
+                        <div class="employee-cell cell-name">NAME</div>
+                        <div class="position_box">
+                            <div class="employee-cell">POSITION</div> <img src="sort.svg">
+                        </div>
+                        <div class="employee-cell cell-hrot">HOURS & OT</div>
+                        <div class="employee-cell cell-moreearnings">MORE EARNINGS</div>
+                        <div class="employee-cell cell-timeoff">TIME OFF</div>
+                        <div class="position_box">
+                            <div class="employee-cell">GROSS EARNINGS</div><i data-feather="arrow-up"></i>
+                        </div>
+                    </div>
+
+
+                    <div class="employee-row employee_firstrow" id="employeeBorder">
+                        <div class="employee-cell">
+                            <input type="checkbox" class="input_padding">
+                        </div>
+
+                        <span class="employee-cell employee_name">Rose Elihu</span>
+
+                        <div class="employee_position_container">
+                            <span class="employee-cell employee_position">Web Designer</span>
+                            <div class="employee-cell employee_hours" onclick="editCell(this)">
+
+                                <div id="dollar" class="dollar"><i data-feather="dollar-sign"
+                                        class="dollar-sign first_dollar"></i></div>
+                                <span>44/hrs</span>
+                                <input type="text" style="display: none;" class="hrs_padding">
+                            </div>
+                        </div>
+                        <div class="employee-cell employee_hours" onclick="editCell(this)">
+                            <div id="dollar" class="dollar"><svg data-feather="dollar-sign" class="dollar-sign"></svg>
+                            </div>
+                            <span>4550.00</span>
+                            <input type="text" style="display: none;">
+                        </div>
+
+
+                        <div class="employee-cell employee_earnings" onclick="editCeell(this)">
+                            <div id="dollar1" class="dollar"><svg data-feather="dollar-sign" class="dollar-sign"></svg>
+                            </div>
+                            <span> 80.00</span>
+                            <input type="text" style="display: none;">
+                        </div>
+                        <div class="employee-cell employee_timeoff" onclick="editCeeell(this)">
+                            <span>hrs 20.00</span>
+                            <input type="text" style="display: none;">
+                        </div>
+
+                        <span class="employee_grossearnings">$7,423.15</span>
+                        <div onclick=" employeeBorder ()">
+                            <div class="" onclick="tableMargin()">
+                                <button onclick="toggleLiftOff()" class="payrolldropdown" id="dropdownbackground" ><i data-feather="chevron-up"
+                                        onclick="chevronRotate()" id="rotate"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div id="dropdown9">
+                        <div id="dropdown8" style="display: none;">
+                            <div class="payroll_dropdown_container" id="tablemargin">
+                                <!-- <div class="employee-cell employee_hours" onclick="editCell(this)">
+                                    <div id="dollar" class="dollar"><svg data-feather="dollar-sign" class="dollar-sign"></svg>
+                                    </div>
+                                    <span>4550.00</span>
+                                    <input type="text" style="display: none;">
+                                </div> -->
+                                <div class="dropdown-container_box"onclick="addMoreCell()">
+                                    <div class="dropdown-container_box_item "   id="addmoreitem">
+                                    <button class="dropdown-container_button"><i data-feather="plus-circle"></i></button>
+                                    <span class="dropdowncontainer_title">Add Rate</span></div>
+                                    <div class="inputbox">
+                                    <span  >dradada kaifob?</span>
+                                    <input type="text" style="display:none;" id="iteminput" class="add_rate_input"></div>
+                                    
+                                    
+                                </div>
+                                
+                                <div class="dropdown-container_box">
+                                    <button class="dropdown-container_button"><i
+                                            data-feather="plus-circle"></i></button>
+                                    <span class="dropdowncontainer_title">Add OT</span>
+                                </div>
+                                <div class="dropdown-container_box">
+                                    <button class="dropdown-container_button"><i
+                                            data-feather="plus-circle"></i></button>
+                                    <span class="dropdowncontainer_title">Add more</span>
+                                </div>
+                                <div class="dropdown-container_box">
+                                    <span class="dropdowncontainer_title">Balance:2hrs</span>
+                                </div>
+                                <div class="dropdown-container_box">
+                                    <button class="dropdown-container_button"><i
+                                            data-feather="plus-circle"></i></button>
+                                    <span class="dropdowncontainer_title">Reimbursement</span>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                    <div class="employee-row " id="employeeBorder">
+                        <div class="employee-cell">
+                            <input type="checkbox" class="input_padding">
+                        </div>
+
+                        <span class="employee-cell employee_name">Rose Elihu</span>
+
+                        <div class="employee_position_container">
+                            <span class="employee-cell employee_position">Web Designer</span>
+                            <div class="employee-cell employee_hours" onclick="editCell(this)">
+
+                                <div id="dollar" class="dollar"><i data-feather="dollar-sign"
+                                        class="dollar-sign first_dollar"></i></div>
+                                <span>44/hrs</span>
+                                <input type="text" style="display: none;" class="hrs_padding">
+                            </div>
+                        </div>
+                        <div class="employee-cell employee_hours" onclick="editCell(this)">
+
+                            <div id="dollar" class="dollar"><svg data-feather="dollar-sign" class="dollar-sign"></svg>
+                            </div>
+                            <span>4550.00</span>
+                            <input type="text" style="display: none;">
+                        </div>
+
+                        <div class="employee-cell employee_earnings" onclick="editCeell(this)">
+                            <div id="dollar1" class="dollar"><svg data-feather="dollar-sign" class="dollar-sign"></svg>
+                            </div>
+                            <span> 80.00</span>
+                            <input type="text" style="display: none;">
+                        </div>
+                        <div class="employee-cell employee_timeoff" onclick="editCeeell(this)">
+                            <span>hrs 20.00</span>
+                            <input type="text" style="display: none;">
+                        </div>
+
+                        <span class="employee_grossearnings">$7,423.15</span>
+                        <div onclick=" employeeBorder ()">
+                            <div class="" onclick="tableMargin()">
+                                <button onclick="toggleLiftOff()" class="payrolldropdown" ><i data-feather="chevron-up"
+                                        onclick="chevronRotate()" id="rotate"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div id="dropdown9">
+                        <div id="dropdown8" style="display: none;">
+                            <div class="payroll_dropdown_container" id="tablemargin">
+                                <div class="dropdown-container_box">
+                                    
+                                    <button class="dropdown-container_button"><i
+                                            data-feather="plus-circle"></i></button>
+                                    <span class="dropdowncontainer_title">AddRate</span>
+                                </div>
+                                
+
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                    <div class="employee-row" id="employeeBorder">
+                        <div class="employee-cell">
+                            <input type="checkbox" class="input_padding">
+                        </div>
+
+                        <span class="employee-cell employee_name">Rose Elihu</span>
+
+                        <div class="employee_position_container">
+                            <span class="employee-cell employee_position">Web Designer</span>
+                            <div class="employee-cell employee_hours" onclick="editCell(this)">
+
+                                <div id="dollar" class="dollar"><i data-feather="dollar-sign"
+                                        class="dollar-sign first_dollar"></i></div>
+                                <span>44/hrs</span>
+                                <input type="text" style="display: none;" class="hrs_padding">
+                            </div>
+                        </div>
+                        <div class="employee-cell employee_hours" onclick="editCell(this)">
+
+                            <div id="dollar" class="dollar"><svg data-feather="dollar-sign" class="dollar-sign"></svg>
+                            </div>
+                            <span>4550.00</span>
+                            <input type="text" style="display: none;">
+                        </div>
+
+                        <div class="employee-cell employee_earnings" onclick="editCeell(this)">
+                            <div id="dollar1" class="dollar"><svg data-feather="dollar-sign" class="dollar-sign"></svg>
+                            </div>
+                            <span> 80.00</span>
+                            <input type="text" style="display: none;">
+                        </div>
+                        <div class="employee-cell employee_timeoff" onclick="editCeeell(this)">
+                            <span>hrs 20.00</span>
+                            <input type="text" style="display: none;">
+                        </div>
+
+                        <span class="employee_grossearnings">$7,423.15</span>
+                        <div onclick=" employeeBorder ()">
+                            <div class="" onclick="tableMargin()">
+                                <button onclick="toggleLiftOff()" class="payrolldropdown"><i data-feather="chevron-up"
+                                        onclick="chevronRotate()" id="rotate"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div id="dropdown9">
+                        <div id="dropdown8" style="display: none;">
+                            <div class="payroll_dropdown_container" id="tablemargin">
+                                <div class="dropdown-container_box">
+                                    <button class="dropdown-container_button"><i
+                                            data-feather="plus-circle"></i></button>
+                                    <span class="dropdowncontainer_title">AddRate</span>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+            </div>
+    </div>
+    </div>
+
+
+
+    </section>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+        feather.replace()
+    </script>
+    <script src="payrolldrop.js"></script>
+    <script src="checkboxinput.js"></script>
+    <script src="payrolline.js"></script>
+    <script src="sidebardrop.js"></script>
+    <script src="dots.js"></script>
+    <script src="headerdrop.js"></script>
+</body>
+
+</html>

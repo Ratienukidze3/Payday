@@ -1,0 +1,241 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="fonts.css">
+        <link rel="stylesheet" href="index.css">
+        <title>Payday</title>
+    </head>
+    <body>
+        <!-- HEADER START -->
+        <header class="header_wrapper">
+            <a href="#" class="header_logo">
+            <img src="payday.svg" alt="" class="header_wrapper_logo"></a>
+            <div class="header_wrapper_rightside">
+            <button class="search_button"><i data-feather="search" class="fe feather_search"></i></button>
+            <input type="Search" placeholder="Search..." class="search_box" id ="q" name="q">
+            <button class="bell_button"><i data-feather="bell" class="fe feather_bell"></i></button>
+            <div class="profile_wrapper_container">
+            <div class="profile_wrapper">
+                <img src="nodari.png" alt="" class="profile_wrapper_img">
+                <div class="profile_wrapper_description">
+                    <a href="#" class="profile_wrapper_name">Julia Hartmann</a>
+                    <span class="profile_wrapper_position">Admin · Baumbach and Sons</span>
+                </div>
+                <button class="dots3_button" id="dots3_button">
+                    <div id="arrow">
+                <i data-feather="chevron-down" class="chevron-down" id="#" >   </i>
+            </div>
+            </button>
+        </div>
+            <div class="dots3_drop" id="dots3_drop">
+                <a href="#">
+                    <i data-feather="user"></i>
+                    User Profile
+                </a>
+                <a href="#">
+                    <i data-feather="settings"></i>
+                    Settings
+                </a>
+                <a href="#">
+                    <i data-feather="log-out"></i>
+                        Log out
+                </a>
+            </div>
+            </div>
+        </div>
+        </header>
+        <!-- HEADER END -->
+        <div class="mainpage_container">
+        
+        <!-- SIDEBAR START -->
+        <div class="wrapper">
+            <ul class="nav_bar">
+             
+              <li class="nav_bar_nav"> <a href="#" class="nav_bar_label"><i data-feather="home" class="fa homeicon" id="icon"></i><span class="nav_bar_name"> Home</span></a></li>
+              <li class="nav_bar_nav"> <a href="#" class="nav_bar_label"><i data-feather="briefcase" class="fa briefcaseicon" id="icon"></i><span class="nav_bar_name"> Banking</span></a></li>
+              <li class="nav_bar_nav"> <a href="#" class="nav_bar_label"><i data-feather="users" class="fa usersicon" id="icon"></i><span class="nav_bar_name"> People</span></a></li>
+            
+              <li class="nav_bar_nav"><a href="#" class="nav_bar_label submenu1"><i data-feather="file-text" class="fa file-text" id="icon"></i><span class="nav_bar_name nav_bar_payroll">Payroll</span> <button class="btn" id="btn">
+                <div id="arrow" >
+            <i data-feather="chevron-down" class="chevron-down chevron_down"></i></div>
+        </button></i></a>
+                <ul class="submenu1_show submenu">
+                    <li><a href="payroll.html" class="category_subname_label"><span class="category_submenu_name">Run Payroll</span></a></li>
+                    <li><a href="#" class="category_subname_label"></i><span class="category_submenu_name">Settings</span></a></li>
+                  </ul>
+              </li>
+              <li class="nav_bar_nav"> <a href="#" class="nav_bar_label"><i data-feather="clock" class="fa homeicon" id="icon"></i><span class="nav_bar_name"> Time</span></a></li>
+              <li class="nav_bar_nav"> <a href="#" class="nav_bar_label"><i data-feather="settings" class="fa settingsicon"id="icon"></i><span class="nav_bar_name"> Settings</span></a></li>
+              
+            </div>
+            
+                    <!-- SIDEBAR END -->
+            
+                    <!-- MAINPAGE START -->
+
+                    
+                <Section class="payroll_container">
+                        
+        
+                    
+                   
+             <div class="other_payroll_opcon">
+            <h2 class="other_payroll_options">Other payroll options</h2>
+            <div class="other_payroll_options_wrapper">
+                <div class="other_payroll_options_container"><div class="payrol_zap_container">
+                    <i data-feather="zap" class="payroll_zap"></i> </div>
+                    <div class="payroll_zap_list">
+                    <p>Off-cycle</p>
+                    <p>Run a payroll outside of your regular pay schedule.</p>
+                    </div>
+                    <button class="run_button"><a href="#" class="payroll_run">Run</a><i data-feather="chevron-right" class="chevron-right"></i> </button>
+                </div>
+                <div class="other_payroll_options_container"><div class="payrol_zap_container">
+                    <i data-feather="gift" class="payroll_zap"></i> </div>
+
+                    <div class="payroll_zap_list">
+                        <p>Bonus payroll</p>
+                        <p>Run a bonus cycle outside of your regular 
+                            pay schedule.</p>
+                    </div>
+                    <button class="run_button"><a href="#" class="payroll_run">Run</a><i data-feather="chevron-right" class="chevron-right"></i> </button>
+                </div>
+                <div class="other_payroll_options_container"><div class="payrol_zap_container">
+                    <i data-feather="refresh-cw" class="payroll_zap"></i> </div>
+
+                    <div class="payroll_zap_list">
+                        <p>Termination</p>
+                        <p>This payroll will appear above afteran 
+                            employee is dismissed.</p>
+                    </div>
+                    <button class="run_button"><a href="#" class="payroll_run">Run</a><i data-feather="chevron-right" class="chevron-right"></i> </button>
+                </div>
+                
+            </div>  
+
+        </div>
+
+            <div class="active_payroll_container">
+                <div class="payroll_container_title">
+                    <p class="active_payrolls">Active payrolls</p>
+                    <a class="completed_payrolls" href="#">Completed payrolls (34)</a>
+                </div> 
+                <div class="payroll_container_description">
+                    <p class="payroll_container_description_title">PAY CYCLE</p>
+                    <p class="payroll_container_description_title">PAYDAY</p>
+                    <p class="payroll_container_description_title">DUE DATE</p>
+                </div>
+                
+            <div class="active_payroll_subcontainer">
+                <ul class="active_payroll_list">
+                    <ul class="pay_cycle_container">
+                        <li>May. 3 - 24</li>
+                        <li>All employees</li>
+                    </ul>
+                    <li class="pay_cycle_container_names">December 14</li>
+                    <li class="pay_cycle_container_names">August 26</li>
+                    <button class="run_late_payroll" ><a href="#" class=""><li class="">Run late Payroll</li></a></button>
+                </ul>
+
+
+                <div class="dots_container">
+                    <button class="dots_button" id="dots_button">
+                <i data-feather="more-vertical" class="dots" id="dots"></i>
+                    </button>
+                <div class="dots_drop" id="dots_drop">
+                    <a href="#" class="dropdown_user">
+                        <i data-feather="archive" class="userprofile"></i>Archieve</a>
+                        <a href="#" class="dropdown_user">
+                            <i data-feather="edit" class="userprofile"></i>Edit settings</a>
+                    <a href="#" class="dropdown_user">
+                        <i data-feather="trash" class="userprofile"></i>Delete</a>
+                </div>
+            </div>
+        </div>
+            
+        
+        <div class="active_payroll_subcontainer">
+            <ul class="active_payroll_list">
+                <ul class="pay_cycle_container">
+                    <li>June. 4 - 28</li>
+                    <li>All employees</li>
+                </ul>
+                <li class="pay_cycle_container_names">July 2</li>
+                <li class="pay_cycle_container_names">September 23</li>
+                <button class="run_payroll" ><a href="#" class=""><li class="">Run Payroll</li></a></button>
+            </ul>
+            <div class="dots_container">
+                <button class="dots1_button" id="dots1_button">
+            <i data-feather="more-vertical" class="dots1" id="dots1"></i>
+                </button>
+            <div class="dots1_drop" id="dots1_drop">
+                <a href="#" class="dropdown_user">
+                    <i data-feather="archive" class="userprofile"></i>Archieve</a>
+                    <a href="#" class="dropdown_user">
+                        <i data-feather="edit" class="userprofile"></i>Edit settings</a>
+                <a href="#" class="dropdown_user">
+                    <i data-feather="trash" class="userprofile"></i>Delete</a>
+            </div>
+        </div>
+            </div>
+        
+
+       
+        
+    <div class="active_payroll_subcontainer">
+        <ul class="active_payroll_list">
+            <ul class="pay_cycle_container">
+                <li>January. 2-30</li>
+                <li>All employees</li>
+            </ul>
+            <li class="pay_cycle_container_names">February 4</li>
+            <li class="pay_cycle_container_names">March 5</li>
+            <button class="review_payroll" ><a href="#" class=""><li class="">Review Payroll</li></a></button>
+        </ul>
+        <div class="dots_container">
+            <button class="dots2_button" id="dots2_button">
+        <i data-feather="more-vertical" class="dots2" id="dots2"></i>
+            </button>
+        <div class="dots2_drop" id="dots2_drop">
+            <a href="#" class="dropdown_user">
+                <i data-feather="archive" class="userprofile"></i>Archieve</a>
+                <a href="#" class="dropdown_user">
+                    <i data-feather="edit" class="userprofile"></i>Edit settings</a>
+            <a href="#" class="dropdown_user">
+                <i data-feather="trash" class="userprofile"></i>Delete</a>
+        </div>
+    </div>
+    </div>
+</div>
+                    
+                    
+                    
+               
+            
+                    </Section>
+            
+            </div>
+                    <!-- MAINPAGE END -->
+                
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.0/jquery.min.js"></script>
+                <script src="https://unpkg.com/feather-icons"></script>
+                <script>
+                    feather.replace()
+                </script>
+                <script src="/sidebardrop.js"></script>
+                <script src="/dots.js"></script>
+                <script src="/headerdrop.js"></script>
+            </body>
+            </html>
+
+
+                
+
+                
+        
+
+            
