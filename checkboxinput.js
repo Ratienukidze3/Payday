@@ -99,6 +99,7 @@ function editCeeell(cell) {
 function addMoreCell (cell) {
   const addMoreItem = document.getElementById ('addmoreitem')
   const showInput = document.getElementById ('iteminput')
+ 
   
   addMoreItem.style.display ='none';
   showInput.style.display ='';
@@ -119,3 +120,11 @@ function addMoreCell (cell) {
 
 
 
+const label = document.getElementById("label");
+const box = document.getElementById("box");
+
+const toggleCheckBox = (e) => {
+  e.target.classList.toggle('checked')
+}
+
+label.addEventListener('click', toggleCheckBox);

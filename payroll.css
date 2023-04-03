@@ -340,7 +340,7 @@ table td {
     margin-top: 70px;
 }
 
-.employee_firstrow { 
+.employee-row:first-child { 
     margin-bottom: 20px;
 }
 .employee-row {
@@ -441,6 +441,14 @@ table td {
     width: 176px;
 }
 
+.rotate { 
+    transform: rotate(180deg);
+    transition: 0.2s ease;
+  }
+  .arrow {
+    transform: rotate(180deg);
+    transition: 0.2s ease;
+  }
 .employee_timeoff {
     font-family: Mukta;
     font-size: 18px;
@@ -585,7 +593,54 @@ table td {
     margin-left: 27px;
 }
 
-
+.input {
+    display: block;
+  }
+  
+  #box {
+    display: none;
+  }
+  
+  #label {
+    margin: 10px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #0D1426;
+    position: relative;
+    border-radius: 4px;
+  }
+  
+  #label::before {
+      opacity: 0;
+      transition: 0.3s;
+      content: '';
+      width: 5px;
+      height: 1.5px;
+      background: #0D1426; 
+      position: absolute;
+      top: 11px;
+      left: 6px;
+      transform: rotate(45deg);
+  }
+  
+  #label::after {
+      opacity: 0;
+      transition: 0.3s;
+      content: '';
+      width: 8px;
+      height: 1.5px;
+      background: #0D1426; 
+      position: absolute;
+      top: 8px;
+      left: 8.4px;
+      transform: rotate(-50deg);
+  }
+  
+  .checked::before, .checked::after {
+    opacity: 1 !important;
+  }
+    
 .input_style {
     width: 120px;
     height: 56px;
@@ -673,4 +728,61 @@ table td {
     height: 40px;
     background-color:ffffff;
 
+}
+
+
+
+.sticky_box { 
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 96px;
+    background-color: white;
+    align-items: center;
+
+}
+
+
+
+.bottom-sticky_container{ 
+    position: sticky;
+    bottom: 0;
+    margin-left: 134px;
+}
+.sticky_left_box {
+    margin-left: 70px;
+}
+.sticky_right_box {
+    margin-right: 70px;
+}
+.goback-btn { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+   color: black;
+}
+.back_button {
+    outline: none;
+    border: none;
+    background-color: white;
+}
+.save-button {
+    cursor: pointer;
+    height: 48px;
+    width: 128px;
+    border-radius: 8px;
+    background: rgba(14, 33, 105, 0.02);
+    border: none;
+}
+.save-button span {
+    color:  rgba(14, 33, 105, 0.24);
+    ;
+}
+.save-button:hover { 
+    background: rgba(14, 33, 105, 1);
+    color: white;
+}
+.save-button:hover span {
+    color: white;
 }

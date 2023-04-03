@@ -71,7 +71,7 @@
                             class="fa file-text" id="icon"></i><span class="nav_bar_name nav_bar_payroll">Payroll</span>
                         <button class="btn" id="btn">
                             <div id="arrow">
-                                <i data-feather="chevron-down" class="chevron-down chevron_down"></i>
+                                <i data-feather="chevron-down" class="chevron-down nav_bar_chevron_down"></i>
                             </div>
                         </button></i></a>
                     <ul class="submenu1_show submenu">
@@ -92,7 +92,9 @@
 
         <!-- HOURS AND EARNINGS START -->
         <section class="hoursearnings">
+            
             <div class="hours_container">
+                
                 <h2 class="hours_title">Hours & Earnings</h2>
                 <div id="container" class="line_container">
                     <div id="div1" class="line_div1"></div>
@@ -172,7 +174,7 @@
 
 
 
-                <div class="employee-table">
+                <div class="employee-table" id="table-parent">
                     <div class="employee-row header-row">
                         <div class="employee-cell">
                             <input type="checkbox" onclick="checkAll(this)" class="input_padding">
@@ -192,6 +194,9 @@
 
                     <div class="employee-row employee_firstrow" id="employeeBorder">
                         <div class="employee-cell">
+                            <!-- <label for="box" id="label"></label>
+<input type="checkbox" id="box"> -->
+
                             <input type="checkbox" class="input_padding">
                         </div>
 
@@ -229,8 +234,8 @@
                         <span class="employee_grossearnings">$7,423.15</span>
                         <div onclick=" employeeBorder ()">
                             <div class="" onclick="tableMargin()">
-                                <button onclick="toggleLiftOff()" class="payrolldropdown" id="dropdownbackground" ><i data-feather="chevron-up"
-                                        onclick="chevronRotate()" id="rotate"></i>
+                                <button onclick="toggleLiftOff()" class="payrolldropdown" id="dropdownbackground"><i
+                                        data-feather="chevron-up" onclick="chevronRotate()" id="rotate"></i>
                                 </button>
                             </div>
                         </div>
@@ -245,17 +250,20 @@
                                     <span>4550.00</span>
                                     <input type="text" style="display: none;">
                                 </div> -->
-                                <div class="dropdown-container_box"onclick="addMoreCell()">
-                                    <div class="dropdown-container_box_item "   id="addmoreitem">
-                                    <button class="dropdown-container_button"><i data-feather="plus-circle"></i></button>
-                                    <span class="dropdowncontainer_title">Add Rate</span></div>
+                                <div class="dropdown-container_box" onclick="addMoreCell()">
+                                    <div class="dropdown-container_box_item " id="addmoreitem">
+                                        <button class="dropdown-container_button"><i
+                                                data-feather="plus-circle"></i></button>
+                                        <span class="dropdowncontainer_title">Add Rate</span>
+                                    </div>
                                     <div class="inputbox">
-                                    <span  >dradada kaifob?</span>
-                                    <input type="text" style="display:none;" id="iteminput" class="add_rate_input"></div>
-                                    
-                                    
+                                        <span>Web Designer</span>
+                                        <input type="text" style="display:none;" id="iteminput" class="add_rate_input">
+                                    </div>
+
+
                                 </div>
-                                
+
                                 <div class="dropdown-container_box">
                                     <button class="dropdown-container_button"><i
                                             data-feather="plus-circle"></i></button>
@@ -282,139 +290,25 @@
 
 
                     </div>
-                    <div class="employee-row " id="employeeBorder">
-                        <div class="employee-cell">
-                            <input type="checkbox" class="input_padding">
-                        </div>
 
-                        <span class="employee-cell employee_name">Rose Elihu</span>
-
-                        <div class="employee_position_container">
-                            <span class="employee-cell employee_position">Web Designer</span>
-                            <div class="employee-cell employee_hours" onclick="editCell(this)">
-
-                                <div id="dollar" class="dollar"><i data-feather="dollar-sign"
-                                        class="dollar-sign first_dollar"></i></div>
-                                <span>44/hrs</span>
-                                <input type="text" style="display: none;" class="hrs_padding">
-                            </div>
-                        </div>
-                        <div class="employee-cell employee_hours" onclick="editCell(this)">
-
-                            <div id="dollar" class="dollar"><svg data-feather="dollar-sign" class="dollar-sign"></svg>
-                            </div>
-                            <span>4550.00</span>
-                            <input type="text" style="display: none;">
-                        </div>
-
-                        <div class="employee-cell employee_earnings" onclick="editCeell(this)">
-                            <div id="dollar1" class="dollar"><svg data-feather="dollar-sign" class="dollar-sign"></svg>
-                            </div>
-                            <span> 80.00</span>
-                            <input type="text" style="display: none;">
-                        </div>
-                        <div class="employee-cell employee_timeoff" onclick="editCeeell(this)">
-                            <span>hrs 20.00</span>
-                            <input type="text" style="display: none;">
-                        </div>
-
-                        <span class="employee_grossearnings">$7,423.15</span>
-                        <div onclick=" employeeBorder ()">
-                            <div class="" onclick="tableMargin()">
-                                <button onclick="toggleLiftOff()" class="payrolldropdown" ><i data-feather="chevron-up"
-                                        onclick="chevronRotate()" id="rotate"></i>
-                                </button>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div id="dropdown9">
-                        <div id="dropdown8" style="display: none;">
-                            <div class="payroll_dropdown_container" id="tablemargin">
-                                <div class="dropdown-container_box">
-                                    
-                                    <button class="dropdown-container_button"><i
-                                            data-feather="plus-circle"></i></button>
-                                    <span class="dropdowncontainer_title">AddRate</span>
-                                </div>
-                                
-
-                            </div>
-                        </div>
-
-
-
-                    </div>
-                    <div class="employee-row" id="employeeBorder">
-                        <div class="employee-cell">
-                            <input type="checkbox" class="input_padding">
-                        </div>
-
-                        <span class="employee-cell employee_name">Rose Elihu</span>
-
-                        <div class="employee_position_container">
-                            <span class="employee-cell employee_position">Web Designer</span>
-                            <div class="employee-cell employee_hours" onclick="editCell(this)">
-
-                                <div id="dollar" class="dollar"><i data-feather="dollar-sign"
-                                        class="dollar-sign first_dollar"></i></div>
-                                <span>44/hrs</span>
-                                <input type="text" style="display: none;" class="hrs_padding">
-                            </div>
-                        </div>
-                        <div class="employee-cell employee_hours" onclick="editCell(this)">
-
-                            <div id="dollar" class="dollar"><svg data-feather="dollar-sign" class="dollar-sign"></svg>
-                            </div>
-                            <span>4550.00</span>
-                            <input type="text" style="display: none;">
-                        </div>
-
-                        <div class="employee-cell employee_earnings" onclick="editCeell(this)">
-                            <div id="dollar1" class="dollar"><svg data-feather="dollar-sign" class="dollar-sign"></svg>
-                            </div>
-                            <span> 80.00</span>
-                            <input type="text" style="display: none;">
-                        </div>
-                        <div class="employee-cell employee_timeoff" onclick="editCeeell(this)">
-                            <span>hrs 20.00</span>
-                            <input type="text" style="display: none;">
-                        </div>
-
-                        <span class="employee_grossearnings">$7,423.15</span>
-                        <div onclick=" employeeBorder ()">
-                            <div class="" onclick="tableMargin()">
-                                <button onclick="toggleLiftOff()" class="payrolldropdown"><i data-feather="chevron-up"
-                                        onclick="chevronRotate()" id="rotate"></i>
-                                </button>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div id="dropdown9">
-                        <div id="dropdown8" style="display: none;">
-                            <div class="payroll_dropdown_container" id="tablemargin">
-                                <div class="dropdown-container_box">
-                                    <button class="dropdown-container_button"><i
-                                            data-feather="plus-circle"></i></button>
-                                    <span class="dropdowncontainer_title">AddRate</span>
-                                </div>
-
-                            </div>
-                        </div>
-
-
-
-                    </div>
+                    
                 </div>
-
+              
             </div>
+        </div>
+        
     </div>
+</section>
+<div class="bottom-sticky_container">
+    <div class="sticky_box">
+        <div class="sticky_left_box">
+            <button class="back_button"><a href="index.html" class="goback-btn"><i data-feather="chevron-left"></i> <span>Back</span></a></button> </div>
+        <div class="sticky_right_box">
+            <button class="save-button"><span>Save</span></button>
+        </div>
+        
     </div>
-
-
-
-    </section>
+</div>
 
 
 
