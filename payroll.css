@@ -102,6 +102,11 @@
     align-items: center;
     margin-left: 34px;
 }
+.widthonclick:hover span { 
+    background: rgba(14, 33, 105, 1);
+    color: white;
+}
+
 
 .hours_title_box :nth-child(1) {
     margin-left: 0px;
@@ -172,6 +177,15 @@
     border-radius: 8px;
     background: linear-gradient(0deg, rgba(13, 20, 38, 0.04), rgba(13, 20, 38, 0.04)), linear-gradient(0deg, #FFFFFF, #FFFFFF);
     border: none;
+}
+.runsettingsbtn:hover { 
+    background: rgba(14, 33, 105, 1);
+}
+.runsettingsbtn:hover a svg{
+    color:white;
+}
+.runsettingsbtn:hover span {
+    color: white;
 }
 
 
@@ -766,7 +780,19 @@ table td {
     outline: none;
     border: none;
     background-color: white;
+    cursor: pointer;
+    height: 48px;
+    width: 128px;
+    border-radius: 8px;
 }
+.back_button:hover {
+    background: rgba(14, 33, 105, 1);
+    color: white;
+}
+.back_button:hover a {
+    color: white;
+}
+
 .save-button {
     cursor: pointer;
     height: 48px;
